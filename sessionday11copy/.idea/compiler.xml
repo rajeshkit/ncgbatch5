@@ -10,6 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="sessionday11" target="18" />
       <module name="sessionday11dessionday11" target="18" />
     </bytecodeTargetLevel>
   </component>
