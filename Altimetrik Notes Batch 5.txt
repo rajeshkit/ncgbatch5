@@ -1,0 +1,668 @@
+Java Introduction:-
+	* It's an object oriented programming
+	* Platform independed
+	* Garbage collector
+	Features of Java:-
+		- OOP language
+		- Multithreadig
+		- Security
+		- Robust
+		- Automatic GC
+Language:- 
+	Human       					-----> Computer
+	English   	   					0's 1's
+	(High Level	  Intermediate Langauge    (Low Level Language)
+	 Language)	
+
+Language:-
+	words
+	Sentence - Rules or grammer
+Java Programming Language:-
+	
+	Reserved keyword:
+	if	default	int	implements
+	else	while	class
+	for	do	this
+	switch	static	abstract
+	case	final	extends
+	class Demo{
+		returntype functionName(){
+			statement;	
+			statement;
+			statement;
+			statement;
+		}
+		returntype functionName(){
+			statement;
+			statement;
+			statement;
+		}	
+	}
+	class OnlineBanking{
+		void fillOnlineForm(){
+			enter name;
+			enter dob;
+			enter email;
+			enter phone;
+			enter address;
+		}
+		void accountVerification(){
+			manager will verify;
+			approval;
+			reject;
+		}
+	}
+
+Java Programming  - compile  		.class		.exe		
+(High Level Langauge)	       Intermediate Language  (Low Level Language)
+.java file
+
+		.java to .class - Compile
+		.class to .executable - Run -> Interpreter - Running 					Application
+
+	javac  - java compiler
+	java - interpreter
+
+	-> Jdk - java developement kit
+
+	jdk - write java code,compile, debug and run your code()
+	JRE - Run the code(Interepreter)
+IDE - it is an software
+	- Eclipse
+	- Intellij
+
+
+	Java Datatype:-
+		Primitive Datatype
+			byte - 1 byte - 8bits
+			short- 2 byte - 16bits
+			int- 4 byte - 32bits
+			long- 8 byte - 64bits
+			float- 4 byte - 32bits
+			double- 8 byte - 64bits
+			char - 2 bytes - 16bits 
+			boolean- 1 bit - 1 bit
+		Non Primitive Datatype or reference type
+			String type
+			Array type
+	Operator:-
+		arithmetic
+		relational operator
+		conditional operator
+		bitwise
+		shift operator
+		ternary operator
+		instance of
+
+		Left Shift = 10*2 pow bits to be shifted
+		Right Shift = 10/2 pow bits to be shifted
+		10>>2
+		>>>	1010111>>>1
+
+	Conditional Statements:-
+		1. Conditional Control Statements
+			1. if
+			2. switch case
+		2. Unconditional Control Statements
+			break;
+			continue;
+	Looping:-
+		1. for	
+		2. while 
+		3. do while
+function or method:-
+	returntype functionname(){
+		statements;	
+	}
+	1. Function without arg no return type
+		void calculateEmi(){
+       			int amount=10000;
+        		float roi=3.5f;
+        		int tenure=2;
+        		float emi = amount * tenure * roi / 100; //logic
+        		System.out.println(emi);
+    		}
+
+	2. Function with arg no return type
+		void calculateEmi(int amount,int tenure,float roi){
+        		float emi = amount * tenure * roi / 100; //logic
+        		System.out.println(emi);
+    		}
+
+	3. Function with arg with return type
+		float calculateEmi(int amount,int tenure,float roi){
+        		float emi = amount * tenure * roi / 100; //logic
+        		return emi;
+    		}
+
+		furthur i am going to use emi value and do some more 
+		calculation
+
+OOP:-
+	Class - is a template or blueprint
+	class contains members
+		variable
+		method
+	predefined class - The class which is already there in the 
+			   Runtime library 
+	userdefined class - The classes which are defined by programmer 
+			   
+
+	class ClassName{
+		int a; //member variable
+		void test(){ // member method or member function
+		}
+	}
+		
+	class Trainee{
+		int traineeId;
+		String traineeName;
+		String email;
+		String phone;
+		void assignments(){
+			
+		}
+		void learning(){
+			
+		}
+		void havingFun(){
+		
+		}	
+	}
+Object:-
+		OOP concept
+		Properties 
+		Behaviour
+
+		OnlineShoping
+			product 
+				
+			login 
+			order 
+			delivery 
+			customer
+			dealer
+			feedback
+			return
+		
+
+			Requirement
+			DESIGN - OOAD - UML - usecase, class diagram ,
+					      sequence dia, collabration
+					      db diagram
+
+
+	
+	class Trainee{				
+		int traineeId;				
+		String traineeName;			
+		String email;				
+		String phone;				
+		void assignments(){			
+			
+		}
+		void learning(){
+			
+		}
+		void havingFun(){
+		
+		}	
+	}
+	
+Trainee t1=new Trainee();
+Properties
+		
+		traineeId=1
+		traineeName=abc
+		phone=4655654
+		email=abc@gmail.com
+
+behaviour
+		void assignments
+		void learning()
+		void assignments()
+		void havingFun()
+
+Trainee t2=new Trainee();
+Properties
+		int traineeId=2;		
+		traineeName=bcd
+		phone=3545234
+		email=bcd@gmail.com
+
+behaviour
+		void assignments
+		void learning()
+		void assignments()
+		void havingFun()
+
+variable:-
+	it is an identity given for the memory location
+	Scope - How far that variable is accessable or it is visible
+	Life time - How long that variable will be there in the memory
+	Types of variable:-
+		1. local variable
+			A variable declared inside the block or method
+			is called as localvariable
+		2. instance variable
+			A variable declared inside the class outside of 			any method is called as instance variable
+		3. static variable
+			A variable declared inside the class outside of 				any method with static keyword is called as 			static variable
+	Method Catagory:-
+		instance method 
+			A method defined inside the class without static
+			keyword is called as instance method
+		static method
+			A method defined inside the class with static
+			keyword is called as static method
+
+
+	Static member can accessed using an class name
+	
+Constructor:
+	-> is an special members function of the class
+	-> It is similar function
+	-> constructor doesnot return value
+	-> constructor name should be same as class name
+
+Inheritance:-
+	To Access or inherit members from one class to the other class
+	you can use inheritance
+	Class1 - Members - variable or method
+	Class2 - Members - variable or method
+
+	IS-A -> extends (Inheritance)
+		1. simple inheritance
+		2. Multilevel Inheritance
+		3. Multiple Inheritance
+		4. Hierachial Inheritance
+		5. Hybrid Inheritance	
+	HAS-A -> Association 
+		1. Aggregation - Weak Association - Part-Of
+		2. composition - Strong Association - Containing 
+	
+class A -- class B
+		Car is a vechile
+		Car Has a AudioSystem
+		Human Has a Heart
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+			
+Polymorphim:-	
+	Poly - Many Morphsim - Form
+		
+	sendingGift - task
+	sendGift(bycourier){
+		
+	}
+	sendGift(IndiaPost){
+
+	}
+	sendGift(ByMyFriend){
+
+	}
+	sendGift(self){
+
+	}
+
+	Compile time binding	
+	
+Abstraction:-
+===========
+	1. abstract class
+	2. interface
+	
+	Showing essential information hidding complex details or hidding 	implementation
+	
+	If your class has minimum one abstract method then mark that 	method and class as abstract
+	
+	U cannot make an object(intance) for an abstract class but u can 
+	reference variable for an abstract class
+	
+	But u can extends an abstract class
+	
+
+	public void videoCall(); //abstract method or unimplemented method
+	
+	public void videoCall(){ //implemented method or non abstracrt 
+								method
+	
+	}
+
+Packages:-
+	-> All the package names should be in lowercase
+	-> package avoid naming collision
+	-> visibility
+	src -> .java files
+	icicibankapp 
+			www.icicibank.com
+		src-> 
+		      com.icicibank.account
+			 Account.java
+			 Passbook.java
+		      com.icicibank.customer
+			 Customer.java
+		      com.icicibank.card
+			 CreditCard.java
+		      	 DebitCard.java
+		      com.icicibank.transaction
+			Deposit.java
+		      	Withdrawl.java
+		      	Transaction.java
+		      	Payment.java
+		      com.icicibank.loan
+			 PersonalLoan.java
+		      	 CarLoan.java
+		     	 HomeLoan.java
+		      com.icicibank.cheque	
+		     	Cheque.java
+	
+Access Modifiers:-
+	public
+	private 	
+	protected
+	default	     
+	
+	If you want to access member of one class to the other, If both
+	the classes are not in the same package then u have to do an
+	import 
+	      
+Non Access Modifier:- It changes default behaviuor
+			public  int a=10;  --> Heap
+			a=687;
+	static
+	final
+	abstract
+	synchronized
+	volatile etc	
+Access Modifiers:-
+	Before variable
+		accessmodifer nonaccessmodifier datatype variablename;
+	Before Method
+		accessmodifer nonaccessmodifier returntype methodname(){
+			-----
+			-----
+		}		
+	Before Class
+		accessmodifier nonaccessmodifier class classname{
+			---;
+			---;
+		} 
+	Before Constructor
+		accessmodifer classnName(){
+			-----;
+			----;
+		}
+
+final
+	before variable
+		final int a;
+	Before method
+		
+	Before class
+Java Naming Conventions:-
+	package - all letters lower case
+	class - name should be noun
+		All words starting character should be in upper case
+		Eg:- Employee
+		     TraineeInformation
+	
+	variable - meaningfull
+		 - if one word - all letter must be lower case
+		 - If more than one word - first word all letter lower 				           case second word onwards 
+				           each word starting character 
+					   in upper case
+	constant variable - All letters in upper case
+			    More than one word - all letters must be in 			    upper case each word connected by _ underscore
+	method - verb
+		 - if one word - all letter must be lower case ()
+		 - If more than one word - first word all letter lower 				           		   case second word onwards 
+				           each word starting character 
+					   in upper case ends with()
+	interface - same as class
+Boxing in java:-
+		Prmitive type 	 Wrapper classes	
+		byte		 Byte
+		short		 Short
+		int		 Integer
+		long		 Long
+		float		 Float
+		double		 Double
+		boolean		 Boolean
+		char		 Character
+				
+		
+	Boxing - converting primtive type to a reference type
+		Integer i=Integer.valueOf(primitivevalue)
+        UnBoxuing - converting reference to a primitive type 
+		referencetypevariable.typeValue();
+		int k = i1.intValue();
+		char c = i.charValue();
+	AutoBoxing - 
+	AutoUnboxing - 
+varargs - variable length argument is called varargs
+
+Enum - Enumeration
+       fixed set of constant values u can for enum
+	
+public enum Direction{
+	EAST,WEST,SOUTH,NORTH
+}			
+	
+
+Java Annotation:-
+=================
+	Java annotations are metadata (data about data) for our program 	source code.
+
+	They provide additional information about the program to the 	compiler but are not part of the program itself. These annotations 	do not affect the execution of the compiled program.
+
+	@Annotation
+		on top of a class
+		on top of a field
+		on top of constrcutor
+		on top of methods
+		on top of paramater
+	@Override
+	Reflection:-
+		In Java, reflection allows us to inspect and manipulate 		classes, interfaces, constructors, methods, and fields at 		run time.
+
+		There is a class in Java named Class that keeps all the 		information about objects and classes at runtime. The 		object of Class can be used to perform reflection.	
+
+		java.lang -> Class
+
+
+
+Java.util
+	Date
+	Format
+	Collections
+	concurrent 
+		Future
+		Callable
+		ConcurrentHashMap
+		Executor
+		ExecutorService
+	function
+		Consumer
+		Function
+		Predicate
+		Supplier
+	Regex
+	stream
+	
+Statement(I)
+		boolean execute() - any DDL or DML
+		ResultSet executeQuery() - DML SELECT
+		int executeUpdate() - DML INSERT,DELETE,UPDATE
+
+		execute() - write and read
+		INSERT - write - executeUpdate()
+		UPDATE - write - executeUpdate()
+		DELETE - write - executeUpdate()
+		SELECT - read - executeQuery()	
+
+PL/SQL:- Procedual Language / SQL
+
+
+Generics:-
+==========
+
+	Generics refer to the ability to use a type as a parameter to 	methods and classes. 
+
+	This provides the ability to define a set of related classes or 	methods that can operate on many different types with a single 	declaration. 
+
+	This also allows type safety at compile-time allowing invalid 	types to be caught during compilation.
+
+
+
+
+
+
+The Executor Framework is a powerful and flexible tool for managing and executing tasks in Java applications. It provides a way to separate the task execution logic from the application code, allowing developers to focus on business logic rather than thread management.
+
+The framework includes several key components, including the Executor, ExecutorService, ScheduledExecutorService, and ThreadPoolExecutor. These components enable developers to control the number of threads, manage task priorities, and handle exceptions and timeouts.
+
+The Executor Framework is particularly useful for managing concurrent tasks in applications with a large number of threads or high levels of concurrency. It is widely used in applications such as web servers, where multiple requests must be processed simultaneously.
+
+Advanced SQL:-
+	SQL Clauses:- used to filter something from the group
+	
+	Use Clause - filter and take one db from group of db's	
+		 Eg:- use world
+	FROM clause - filter and take a table from the group table from
+		      selected db
+		Eg:-
+		     From city;
+	SELECT clause - 
+		     - filter the column from the group of column from the 		       the selected table
+		
+	WHERE clause - filter the row from the table we have selected
+	
+	LIMIT clause - filter the row from the where clause
+		
+	GROUP BY - it is going to filter and group the row based on the 
+		   column 
+	HAVING Clause  - used to filter the row from the result of group 			 	 by clause
+	ORDER BY clause
+
+JOINS:-
+	join one or more table to retrive the data from multiple table
+	THETA STYLE
+		SELECT columnames FROM table1,table2 
+		WHERE table1.column=table2.column;
+	ANSI STYLE
+		SELECT columnames FROM table1 JOIN table2 
+		ON table1.column=table2.column;
+		
+		SELECT student_id,student_name,student_email,dept_name,
+		email,password,username FROM student JOIN department ON 			department.dept_id=student.dept_id_fk JOIN user ON 				student.student_id=user.id;
+	
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      
+		      
+		     
+		      
+		 
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+	
+
+
+
+
+
+

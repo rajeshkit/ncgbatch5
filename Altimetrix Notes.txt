@@ -1,0 +1,1183 @@
+  
+
+Java:-
+	
+	block - 
+			{
+			statements;		
+			statements;
+			}
+
+	javac filename.java
+	java filename -> IDE -> Run as-> Java Application
+Control Statement:-
+	By default java executes your statement from top to bottom
+	
+	Types of control statement:-
+	1. conditonal control statement
+		if:-
+			if(condition){
+				statements;
+			}
+			=============================
+			if(condition){
+				statements;
+			}
+			else{
+				statements
+			}
+			=============================
+			if(condition){
+				statements;
+			}
+			else if(condition){
+				statements
+			}
+			else if(condition){
+				statements
+			}else{
+			        statements
+			}		
+			=============================
+			switch(1) {
+			case 1: {
+			System.out.println("statement 3");
+			System.out.println("statement 4");
+			System.out.println("statement 5");
+			}
+			case 2: {
+			System.out.println("statement 6");
+			System.out.println("statement 7");
+			System.out.println("statement 8");
+			}
+			case 3:{
+				statements;
+			}
+			default:{
+			}
+	2. unconditional control statement
+			break
+			continue
+Looping Statement:-
+		for loop:-
+		for(initialization;condition;increment/decrement){
+			statements;
+		}
+		=================================
+		while(condition){
+			statements;
+		}
+		=================================
+		do{
+			statements;
+		}while(condition);
+
+while vs do while:-
+
+variable:-
+	* It is an identity given to the memory location
+	* In java value stored in the memory either read or write can be 	  	  done through java variable 
+	* variable stores data or a value
+
+Methods or functions:-	
+	* Methods tend to do a perticuler task
+	* Method or function inorder to perform logic needs an data
+	* Method in java should not cross more than 15 lines of code
+	  then create an another method and call it
+	* Method never executed automatically programmer need to call 
+	  the method explicitly
+	* Method definition - 
+	* Method call - should invoke the matching method definition
+	Method Syntax:-
+	==============
+	accessmodifier nonaccessmodifier returntype methodname(arglist){
+		statements;
+		statements;
+	}
+	
+	Eg:-
+	void add() { 
+		int a = 10;// data
+		int b = 20;// data
+		int c =  a + b;// logic
+		System.out.println(c); 	//printing the value
+	}
+	ways to write a methods:-
+	=========================
+	1. function with no argument and no return type
+		void circle() {
+			int radius=34;
+			float area=3.14f*radius*radius;
+			System.out.println(area);
+		}
+	2. function with no argument and with return type
+		float circle() {
+			int radius=34;
+			float area=3.14f*radius*radius;
+			return area;
+		}
+	3. function with argument and with out return type
+	4. function with argument and with return type
+
+
+Object Creation Syntax:-
+	Classname objectname=new Classname();
+
+
+Task:-
+	create a class call as Area
+	create a two methods
+	1. main method
+	2. circle() inside the circle method implement circle area
+	3. call the circle method from main method
+
+
+Class:-	
+	• It contains variable or attributes and methods, constructor,
+	  static blocks
+	  It is a blueprint or template for an object	
+	  Objects are made from class
+	  
+	
+	1. Userdefined java class - Java classes created by programmer
+		Eg:- Geometric, Area
+	2. Predefined java Class - The java classes already created 				   and it kept inside the runtime 				   	   system library are called as 				           predefined classes 
+		Eg:- Scanner, String
+
+Object:-
+	Objects are made from class
+	Instance of class called as object
+	Object contains - Properties 
+			  Behaviour
+
+	Customer - id,name,email,phone 
+		   createAccount(), closeAccount(),changePin()
+	Cashier
+	Manager
+	Deposit
+	CreditCard -no, doe, cvv, carttype, pin
+		statement(), bill(), emi()
+	DebitCard
+	Cheque
+	Account
+	
+
+Method Overloadding:-
+	* Method with same name different arguments are called as 	  	  method overloading.
+	  Payment -> Task is makePayment -UPI, OnlineBabnking,
+					    Cash, cards
+		
+Variable:-
+	Instance variable - A variable is declared inside the class 	   		    outside of any method is called as instance 			    variable
+	Static variable - A variable is declared inside the class 	   		    outside of any method with static keyword is called as 		    static variable
+	Local variable - A variable declared inside the method or inside
+			 the block are called as local variable
+
+Method Area - static members - static varibale, static method, static 			       block
+Heap - Instance members - instance variable, instance method
+Stack - Reference variable and local variable
+
+
+Constructor:-
+	Is a sepcial member function in a class
+	Constructor never returns a value
+	Constructor name should be same as your class name
+	Constructor can be overloadded
+Association:-
+	Communication between classes
+	To access the members of one class to the another class
+	
+	Phone    ----->    SmartPhone
+
+	IS-A Association - extends 
+		1. single inhritance
+			Phone
+			  
+			SmartPhone		
+
+	HAS-A Association
+
+variables:-
+	Primitive - byte,short,int,long,float,double,char,boolean
+	Non primitive or reference or object reference - String, Array 
+	
+	int a=45;
+	
+
+Primitive type		Wrapper class		Reference Type
+byte			Byte			Byte.valueOf(bytevalue)
+short			Short			Short.valueOf(shortvalue)
+int			Integer
+long			Long
+float			Float
+double			Double
+char			Character
+boolean			Boolean
+	
+	boxing - converting primitive type to non primitive type
+		Byte.valueOf(bytevalue)
+	unboxing - converting non primitive type to primitive
+		referenceByte.byteValue();
+varargs:-
+	varargs - variable length arguments
+
+	Employee interface
+		
+		appraisal();
+	class PermanentEmployee inherit Employee interface
+	class TemporaryEmployee inherit Employee interface
+	class SupportEmployee inherit Employee interface
+			
+	
+	EmployeeManagement class
+		need to create an object for all the child classes
+		which implements Employee interface
+
+	Object clone(Object i){
+
+	}
+			Number -> Byte,Short,Integer,Long
+
+
+
+	Object casting:-
+		Assigning object of one type to another type
+		1.Implicit Object casting Or Upcasting or Widening
+		
+			ParentClass ref=new ChildClass()
+		
+		2.Explicit Object Casting Or Downcasting or Narrowing
+
+			ChildClass ref=New ParentClass();
+		
+		Muttable - changable    
+			String locationName = "Ascenda Tech Park chennai"
+			locationName+" chennai";		
+			
+		Immutable - not changable
+			String locationName = "Ascenda Tech Park"
+			locationName+" chennai";
+
+			"Ascenda Tech Park chennai"
+		
+		String Literal - Immutable String
+		
+		StringBuffer  - Muttable String
+		
+		StringBuilder - Muttable String	
+
+
+Cart.java
+	public class Cart{
+		public static void main(String args[]){
+			productName;
+			description;
+			price;
+			noOfProducts;
+			totalPrice;
+			display all the details
+		}
+	}
+
+
+	Create at least two product in the cart
+Types of Exception:-
+	1. Checked Exception
+		The exception classes which extends Exception class are
+		callled as checked exception
+		Eg: ClassNotFoundException, ClassCastException
+	2. Unchecked Exception
+		The exception classes which extends RuntimException class 			are called as Unchecked exception or Runtime Exception
+		Eg: ArithmeticExceptin, NullPointerException
+Java Enum:-
+=========
+In Java, an enum (short for enumeration) is a type that has a fixed set of constant values.
+
+ It denotes a special type of class that always extends the java.lang.Enum class. 
+
+These values inside the braces are called enum constants (values).
+
+An enum class can include methods and fields just like regular classes.
+
+enum Size {
+    constant1, constant2, …, constantN;
+
+    // methods and fields	
+}
+java.lang - Package
+	- It is a java language supporting fundamental important package
+	- interfaces - Clonable,Comparable,Runnable,AutoClosable
+	- classes - Thread, String, StringBuffer, StringBuilder,Wrapper
+	- annotation - @Override @Deprectated
+	- enum -
+	
+	JRE System Library
+		-> collections of jar file (Java archive file)
+			-> Each jar has a collections of package
+				 -> Each package has set of 				    			    classes,interface,enum, annotations 				    etc	
+String:-
+	String literal - immutable
+		String s="altimetrik";
+	String object - immutable
+		String s=new String("altimetrik");
+	StringBuffer - muttable
+		StringBuffer sb=new StringBuffer("altimetrik");
+	StringBuilder - muttable			
+		StringBuilder sbb=new StringBuilder("altimetrik");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+Multitasking:-
+	Process - Multiprocessing
+	Thread - Multithreading
+
+	A thread is a thread of execution in a program. 
+	The Java Virtual Machine allows an application to have multiple 		threads of execution running concurrently. 
+	Every thread has a priority. 
+	Threads with higher priority are executed in preference to threads 	with lower priority.
+	Java Thread creation types:-
+	1. Extending an Thread
+	2. Implementing a Runnable
+
+	public class Laptop extends Thread
+		Laptop l=new Laptop();
+		l.start() --> internally it is going to the run()
+			      run() - write a task to be executed 
+			      by the thread l
+
+
+Array:-	
+	group of similar type, size is fixed
+	Array can both hold primitive and non primitive of similar type
+
+Collection:-
+	can hold group of object non primtive 
+	similar non similar type, dynamic in size
+	
+	collection has its own hierachy
+	collection hieraichy has  - interfaces, abstract class,
+				    concrete class etc
+
+	Each collection classare backed by one datastructure algrithm
+	1. Array
+	2. LinkedList
+	3. Tree
+	4. Hashing
+	5. Sort
+
+	ArrayList - Array DS, Not a thread safe
+	LinkedList - LinkedList DS
+	Vector - Array DS, Thread safe
+
+	HashSet - Hashing DS(HashTable)
+	LinkedHashSet - LinkedList + Hashing
+	TreeSet - Tree DS - sorting
+
+
+	Order or Unorder
+	duplicate or no duplicate
+	accepts null or will not accept a null
+		
+	List
+		maintains the objects in order
+		It accepts an duplicate	objects
+		It accepts an null objects
+
+	Set
+		maintains the objects in unorder		
+		It will not accept an duplicate object
+		It will accepts only one null object
+
+
+Data:-	
+	useful information
+Database
+	Collection useful information
+Relational Database
+	Collection of useful information that has relationship among them
+Database Management System
+	It is a software that manages one or more databases
+Relational Database Management System
+	It is a software that manages one or more databases that has a
+	relationship
+SQL Commands Types:-
+	DDL(Data Definition Language)
+		CREATE - create database
+			CREATE DATABASE databasename;
+		USE - select a database
+			USE databasename;
+		DROP - delete a database
+			DROP DATABASE databasename;
+		SHOW - list all the databases
+			SHOW DATABASES;
+
+		CREATE - create a new table
+			CREATE TABLE tablename(columname1 datatype,
+			columname2 datatype,
+			columname3 datatype,
+			columnamen datatype);
+			CREATE TABLE employee(id number,name varchar,
+			dob date,phone varchar(10));
+
+		DROP  - delete a table from the database
+			DROP TABLE tablename;
+			DROP TABLE employee;
+			
+	DML(Data Manuplation Language)
+		
+		INSERT - Add a row
+			INSERT INTO tablename VALUES(value1,value2,..);
+			INSERT INTO employee VALUES			(354,'qwe','qwe@gmail.com',5675);	
+		SELECT  - view the row
+			SELECT * FROM tablename;
+			SELECT * FROM Employee;
+		DELETE - delete a row
+			DELETE FROM employee WHERE condition;
+
+			DELETE FROM employee WHERE email='qwe@gmail.com';
+		UPDATE:- 
+			UPDATE TABLENAME SET 			columnname=newvalue,columnname=newvalue WHERE 					condition;
+
+			UPDATE employee SET salary=10000 WHERE id=234;
+
+			UPDATE employee SET salary=10000,name='rrr',email='rrr@gmail.com' WHERE id=234;
+
+	TCL(Transaction Control Language)
+	DCL(Data Control Language)
+
+
+	JDBC API:-
+		
+		DriverManager(C) - getConnection(url,username,password)
+		Connection(I)
+		Statement(I) or -execute(),executeUpdate(), executeQuery()
+		PreparedStatement(I) or - execute(),executeUpdate(), 					executeQuery()
+		CallableStatement(I) -execute(),executeUpdate(), 				executeQuery()
+
+	booelan execute(query);-DDL query
+	int executeUpdate(query); - write operation(INSERT,UPDATE,DELETE)
+	ResultSet executeQuery(query); - read operation(SELECT)
+	insert - write operation
+	update - write operation
+	delete - write operation
+	select - read operation	
+	Steps:-
+		Prerequitse:- Download mysql connector.jar jdbc driver for 			      mysql
+			      Add the mysql connector.jar into the project
+		
+		Step 1: Load the Driver class
+			Class.forName("com.mysql.cj.jdbc.Driver");
+		Step 2: Create a Connection 
+			DriverManager.getConnection(url,username,password)	
+			
+		
+	Statement 				Prepared Statement
+
+static SQL Query				Dynamic SQL query
+INSERT INTO employee 				INSERT INTO employee 
+VALUES(7000,'rahul',				VALUES(?,?,?,?);
+'rahul@gmail.com',3477)	
+
+if the query wanted once			If the wanted to execute
+						mutiple times
+performance is low				performance is high
+						(queries are precompiled)
+
+PL/SQL:-Procedural Language / Structured Query Language
+	declare a variable	
+	create/call a method / pass an arg to the method / return a value
+	if condition 
+	switch case
+	for
+	array
+		void main(){
+			int a;
+			
+		}
+
+
+PL/SQL:- 	
+		create or replace function main(name varchar)
+		begin
+			a int;
+		end;
+		
+	Procedure - returns zero or more value
+	Function - returns exactly must return value
+USE `altimetrik`;
+DROP procedure IF EXISTS `getEmployeeSalaryById`;
+
+USE `altimetrik`;
+DROP procedure IF EXISTS `altimetrik`.`getEmployeeSalaryById`;
+;
+
+DELIMITER $$
+USE `altimetrik`$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `getEmployeeSalaryById`(IN eid int, OUT esalary int,OUT ename varchar)
+BEGIN
+	select salary into esalary from employee where id=eid;
+	select name into ename from employee where id=eid;
+END;$$
+
+DELIMITER ;
+;
+
+
+Enum:-
+	 Java Enum serve the purpose of representing a group of named 	 	 constants in a programming language.
+	
+	 In Java, an enum (short for enumeration) is a type that has a 	 fixed set of constant values. We use the enum keyword to declare 		 enums. 
+
+	 Enums are used when we know all possible values at compile time, 		
+	 static and final variable
+		
+	 A Java enumeration is a class type. 
+		
+	 The enum constants are usually represented in uppercase.
+	 enum enumName{
+		CONSTANT1,
+		CONSTANT2,
+		CONSTANT3,
+	 }
+	
+Lambda Expression:-
+	Functional Interface:-
+		A interface has only one abstract method
+
+		@FunctionalInterface on top of the finctional interface
+
+		A functional should have exactly one abstract method
+		But it can have zero or more implemented method
+
+		Runnable Interface - run() Functional Interface	 
+		Comparable Interface - compareTo - Functional Interface
+		Comparator Interface - compare
+
+Java 8 Features:-
+	Funtional Interface	
+	default method
+	static method
+	Lamda expression - Functional programming - concise and clear
+	Method Reference
+	Stream API - simple stream and parellel stream
+	New DateTime API - java.time
+		LocalDate
+		LocalTime
+		LocalDateTime
+		
+		String ---> LocalDate,LocalTime - DateTimeFormatter
+	
+
+Lambda Rule:-
+	Lambda expression doesnot take annotations
+	Lambda expression doesnot take access and non access modifier
+	Lambda expression doesnot take method return type
+	Lambda expression doesnot take method name
+	Lambda expression after the argument bracket ->(operator)
+	Lambda expression arg type is optional remove the type 
+	if lambda body only one statement u can remove the {  } braces
+	from the lambda body
+	if lambda body only one statement that too return statement u can 		remove the {  } braces and also return keyword	from the lambda 		body
+
+Generics in java:-
+	Java generics are mainly used to impose type safety in programs
+	It avoid type conversion
+	
+	Java Generic - Syntax and Naming Convention	
+		E – Element (used extensively by the Java Collections 		    			Framework,for example, ArrayList, Set, etc.)
+		K – Key (Used in Map)
+		N – Number
+		T – Parameter Type
+		V – Value (Used in Map)
+	Types of Generics in Java
+		Java Generic Type Class
+		Java Generics Interface
+			//Generic interface definition
+    			interface DemoInterface<T1,T2>{
+    				T1 doSomeOperation(T1 t);
+    				T2 doReverseOperation(T2 t);
+   			}
+			//Class implementing generic interface
+
+		Generic Method
+Adv:-
+	Code Reusability 
+	Type Safety
+	Individual Type Casting is not Needed
+	
+	Generics in Java is a way of enforcing type safety through 	compile-time checks.
+	You can use generics in classes, methods, and interfaces.
+	Generics do not work with primitive data types. Hence wrapper 	class for the data type must be used. Ex- Integer, Float, Double, 	etc.
+	Wildcard enhances the utility of generics by giving more control 	in handling unknown data types.
+
+Java Reflection:-
+	Java Reflection provides ability to inspect and modify the runtime 	behavior of application.
+
+SOLID Design Principles:-
+	SOLID is a structured design approach that ensures your software 		      is modular and easy to maintain, understand, debug, and 	      refactor.
+	S- Single Responsibility Pricnciple:-
+	O- Open extension closed for modification
+	L- Liskov substitution principle
+	I- Interface Segregation Principles
+	D- Depndency Injection
+
+	S - Single Responsibility Principle
+		Each class or method should be responsible for a single 		functionality of the system.
+		Every class in Java should have a single job to do. To be 			precise, there should only be one reason to change a 				class. 
+		public class Vehicle {    			
+			public void addVehicle() {}
+			public double updateVechile() {}
+			public void deleteVechile() {}
+			
+		}
+		public class VechileService{
+			public void waterService();
+		}
+
+		public class VechileValuation(){
+			
+    			
+		}
+		public class VechileDetails{
+			
+		}
+		
+		public class Employee{
+			public void addEmployee();
+			public void deleteEmployee();
+			public void updateEmployee();
+			public void getSudexo();
+		}
+		
+		public class Caclulator{
+			public void add(int a,int b,int c){
+				int total=a+b;
+				return multily(total,c);
+			}
+			public int multiply(int total,int c){
+				return total*c;
+			}
+		}
+
+	O - Open Closed Principle:-
+		Software entities (e.g., classes, modules, functions) 		should be open for an extension, but closed for 		modification.
+		Open for extension, meaning that the class’s behavior can 		be extended; and
+		Closed for modification, meaning that the source code is 		set and cannot be changed.
+
+		public class Vehicle {
+    			public double calculateTwoWheelerVechicleValue() {
+				twowheeler
+				
+			}
+			public double calculateCarVechicleValue() {
+				car
+				
+			}
+			public double calculateLorryVechicleValue() {
+				Lorry
+				
+			}
+		}
+
+
+
+
+
+
+
+
+
+		public class VehicleCalculations {
+    			public double calculateValue(Vehicle v) {
+        		if (v instanceof Car) {
+            			return v.getValue() * 0.8;
+        		if (v instanceof Bike) {
+            			return v.getValue() * 0.5;
+    			}
+			if (v instanceof Electric) {
+            			return v.getValue() * 0.2;
+
+    			}
+		}
+		 
+		public interface Vehicle {
+    			public double calculateValue();
+		}
+		public class Car implements Vehicle {
+    			public double calculateValue() {
+        			return this.getValue() * 0.8;
+		}
+		public class Truck implements Vehicle{
+    			public double calculateValue() {
+        			return this.getValue() * 0.9;
+		}
+		public class Electric implements Vehicle{
+			public double calculateValue() {
+        			return this.getValue() * 0.2;
+		}	  
+	}
+	L - Liskov Substitution Principles
+		The Liskov Substitution Principle (LSP) applies to 		inheritance hierarchies such that derived classes must 				be completely substitutable for their base classes.
+		
+		 It states that objects of a superclass should be 		 replaceable with objects of its subclasses without breaking the system’s integrity. 
+			
+		In simpler terms, any instance of a base class should be 		able to be replaced by any of its derived classes without 		affecting the correctness of the program
+
+			
+		List alist=new ArrayList();
+
+	
+
+	public interface Player{
+		public void audio();
+		default public void video();
+	}
+	public class VlcPlayer implements Player{
+		public void audio(){}
+		public void video(){}
+	}
+	public interface MusicPlayer{
+		public void audio();
+	}
+	public class WinAmp implements MusicPlayer{
+		
+	}
+		Player p=new VlcPlayer();
+		MusicPlayer p1=new WinAmp();
+	I - Interface Seggregation Priciples
+	public interface TwoWeeler{
+		 public void drive();
+    		 public void stop();
+    		 public void refuel();
+		
+	}
+	public interface FourWeeler{
+		 public void drive();
+    		 public void stop();
+    		 public void refuel();
+	}
+	public interface AdavncedFourWheeler extends TwoWheeler{
+		public void abs();
+	}
+	class Car implements FourWheeler{
+		
+	}
+	class SuvCar implements AdvanceFourWheeler{
+		
+	}
+
+
+
+
+
+
+
+		
+
+	D - Dependency inversion principle
+		The Dependency Inversion Principle (DIP) states that we 		should depend on abstractions (interfaces and abstract 				classes) instead of concrete implementations (classes).
+	
+	 	The abstractions should not depend on details; instead, 			the details should depend on abstractions.
+Maven:-
+	-> java project - management tool
+	-> Maven is a powerful build tool for Java software projects.
+	-> A build tool is a tool that automates everything related to 	   building the software project.
+		Standard folder or project structure 
+		It can manages the dependencies
+		Generating source code (if auto-generated code is used in 			the project).
+		Generating documentation from the source code.
+		Compiling source code.
+		Packaging compiled code into JAR files or ZIP files.
+		Installing the packaged code on a server, in a repository 			or somewhere else.
+	  -> project dependencies 
+			-> JRE system Library 
+		POM - Project Object Model - XML - Main
+	Dependencies and Repositories
+		.jar - files
+					
+	Maven POM Files
+
+		A Maven POM file (Project Object Model) is an XML file 		that describes the resources of the project. 
+		
+		This includes the directories where the source code, test 		source etc. is located in, what external dependencies (JAR 		files) your projects has etc.
+
+
+		groupId - the client name or company namewhom we are doing
+		artificateID -  the project name
+		version - x.x
+
+		<groupId>com.paypal</groupId>			
+		<artifactId>paymentgateway</artifactId>
+		<version>1.0</version>
+
+		<groupId>com.paypal</groupId>			
+		<artifactId>upi</artifactId>
+		<version>1.0</version>
+
+		<groupId>com.paypal</groupId>			
+		<artifactId>creditcard</artifactId>
+		<version>1.0</version>
+=====================================================================
+Maven life cycle, Phases, Goals, Plugins, Build process, Deploy the project jar into a real server
+====================================================================
+
+Spring Framework:-
+
+	The Spring framework(which is commonly known as Spring) has 		emerged as a solution to all these complications This framework 		uses various new techniques such as Aspect-Oriented Programming 		(AOP), Plain Old Java Object (POJO), and dependency injection 		(DI), to develop enterprise applications, thereby removing the 		complexities involved while developing enterprise applications 		using EJB, classic java application approach, 
+	
+	Spring is an open source lightweight framework that allows Java EE 	7 developers to build simple, reliable, and scalable enterprise 		applications.
+	 
+	This framework mainly focuses on providing various ways to help 		you manage your business objects. 
+	
+	It made the development of Web applications much easier as 			compared to classic Java frameworks and Application Programming 		Interfaces (APIs), such as Java database connectivity(JDBC), 			JavaServer Pages(JSP), and Java Servlet.'
+Java
+	JavaSE -standard edition - console based application
+	JavaEE -Enterprise Edition - web based application
+	JavaME - Mobile Edition
+	JavaE - Embedded
+	
+	Spring Framework:-
+		Features
+		1. IOC - Inversion of control
+			IOC container and context responsibility:
+			1. creates an necessary object
+			2. maintain the objects
+			3. inject the one object to the another object
+			4. destroy the objects
+
+			Types of IOC container or context
+			1.1 BeanFactory	- older and first IOC container		
+			1.2 ApplicationContext - advanced than beanfactory
+				extends BeanFactory
+			1.3 WebApplicationContext
+			Bean Scopes - singleton, prototype
+
+		2. DI - Dependency Injection
+			a class can depend on another class
+			a object can depend on another object
+		class Course{
+			//course details	
+		}
+		class Student{
+			//access course details
+			Course course; // dependency
+			public Student(Course course){
+				this.course=course;	
+			}	
+			course.getCourse();
+		}
+		A Student class Course class
+		======================================
+		class Course{
+			//course details	
+		}
+		class Student{
+			//access course details
+			Course course=new Courese(); // dependency
+			course.getCourse();
+		}
+
+		3. AOP - Aspect Oriented Programming
+tightly coupled application - If developer creates an object with new 
+loosly coupled application - if container creates and gives u an
+			     object when developer wanted it
+		maintainable
+		changable
+		easily testable
+
+
+We won't create any object with new keyword. IOC container is going to give you the bean object whenever u need
+
+IOC container:-
+		- create destroy the objects
+		- injection of object - object wiring 
+		- constructor, setter based injection or wiring
+		- Autowire -> automatically
+		
+		Autowire
+			- byName
+			- byType
+			- constructor
+			- no
+
+	<bean id="t1" class="com.altimetrik.Transport"></bean>
+	<bean id="p1" class="com.altimetrik.Passenger" autowire="no">
+		<constructor-arg></constructor-arg>
+			Or
+		<property></property>
+	</bean>
+	=========================================
+	<bean id="t1" class="com.altimetrik.Transport"></bean>
+	<bean id="p1" class="com.altimetrik.Passenger" 		autowire="contructor"></bean>
+	=================================================
+	<bean id="t1" class="com.altimetrik.Transport"></bean>
+	<bean id="p1" class="com.altimetrik.Passenger" 				autowire="byType"></bean>
+	=================================================
+	<bean id="t1" class="com.altimetrik.Transport"></bean>
+	<bean id="p1" class="com.altimetrik.Passenger" 				autowire="byName"></bean>
+
+
+SOA:-
+====
+	
+WebService:-
+===========
+		* Client / Server Architecture
+		SOAP
+		Rest API
+
+	Client
+	
+	Rest API
+		Server - Tomcate Server
+		spring jar
+		rest jar
+		database configuration
+		bean configuration file
+		component-scan
+		java object - json format conversion - jar file
+
+	Spring framework + Rest api
+
+Rest API:- 
+	create a resource -POST	http://altimatrik.com:80/product
+	get all resources -GET	http://altimatrik.com:80/products
+	get resource	  -GET	http://altimatrik.com:80/product/{id}
+	update resource	  -PUT 	http://altimatrik.com:80/product/{id}
+	delete a resource -DELETE http://altimatrik.com:80/product/{id}
+
+Spring Boot:-
+		spring boot + rest api
+
+Spring Data Jpa:
+1. spring-boot-starter-data-jpa 
+2. mysql-connector/j
+3. application.properties -> db url,username,password
+
+			  -> db configuration
+
+
+@SpringBootConfiguration -> programmer java configuration class with  @EnableAutoConfiguration-> spring boot loads @configuration annotated 			   classes
+@ComponentScan - scan the component class (userdefined and predefined)
+
+Bean Validation:-
+	
+	dependency  - spring-boot-starter-validation	
+		
+@NotNull: to say that a field must not be null.
+@NotEmpty: to say that a list field must not empty.
+@NotBlank: to say that a string field must not be the empty string (i.e. 	   it must have at least one character).
+@Min and @Max: to say that a numerical field is only valid when it’s value            is above or below a certain value.
+@Pattern: to say that a string field is only valid when it matches a            certain regular expression.
+@Email: to say that a string field must be a valid email address.
+@Size(min, max): Validates if a string or collection size is within a 		 specific range.
+@Digits(integer, fraction): Validates that a numeric field has a specified 		 number of integer and fraction digits.
+@Past and @Future : Checks that a date or time field is in the past and 		    future respectively.
+@AssertTrue and @AssertFalse: Ensures that a boolean field is true. and 				false respectively.
+@CreditCardNumber: Validates that a field contains a valid credit card 			number.
+@Valid: 	Triggers validation of binding objects or properties.
+@Validated: 
+		Specifies validation groups to be applied at the class or 		method level.	
+
+
+Java Unit Testing
+	QA Team - Testing
+		Unit Test 
+			src/main/java
+				AggregateCaluclator.java
+				{
+100  10					public float cacluateGpa
+					(int score){
+						return score/100*10; 
+					}
+				}
+			src/main/test			
+				Testing framework - junit 5
+			class AggregateCaluclatorTest
+				@Test
+				public void testaCluateGpa(){
+					assert(10.0,cacluateGpa(100));
+				}
+
+Rule for test case:-
+	- Test class name should be same as your class name 
+	  it should ends with Test Keyword
+	- @Test
+	- Test case method does not return value(void)
+	- Test case method name should start with test keyword
+	- Test case method any arg	
+
+		Integration Test
+
+	style - html element 
+		
+		style - stylename:stylevalue;
+
+		selector{
+			color:"red";
+			background-color:"black";
+		}	
+		Types of selector css:-
+			1. element or tag selector
+				p{
+					color:"red";
+					background-color:"black";
+				}
+				div{
+					color:"red";
+					background-color:"black";
+				}	
+			2. id selector
+
+				#para3{
+					color:"red";
+					background-color:"black";			
+				}
+				#para2{
+					color:"red";
+					background-color:"black";			
+				}
+			3. class selector
+				.parastyle{
+					color:"red";
+					background-color:"black";	
+				}
+				.content{
+					font-size:2em;	
+				}
+Three ways of writing css:-
+	1. Inline style - scope of the style rule only within the element
+	2. Internal style -  scope of the style rule with in the entire 			     html document element
+	3. External style - scope of the style rule with in the entire 			     html document element and all other document
+Html Element or Tag:-
+
+		Inline level element - span,strong
+		block level element - div,p
+
+	static variablename=value;
+	primitive type
+	Reference type
+Javascript:-
+	a=10;
+	primitive type - number,string,boolean,undefined,null
+		
+	Reference type - Array,Object
+		
+	array - []
+
+	Arrays:-
+		 var a=[34,56,true,34,"vijay",35.4,null,undefined];
+        
+        	for (let index = 0; index < a.length; index++) {
+            		const element = a[index];
+            		console.log(element);
+            	}
+        	for (const i of a) { //for of - used to iterate the array
+            		console.log(i);
+        	}
+        	a.forEach(e=>console.log(e));
+React JS:-
+============
+	* The library for web and native user interfaces	
+	* React lets you build user interfaces out of individual pieces 	  	  called components. 
+	* Create your own React components like Thumbnail, LikeButton, and 	  Video. Then combine them into entire screens, pages, and apps.
+	* 
+	
+React Component:-
+	React component has properties, state management, life cycle and 		event handler
+
+	React app starts with a single root component.
+
+	Root component is build using one or more component.
+
+	Each component can be nested with other component to any level.
+			
+	React app can include third party component for specific purpose 	such as routing, animation, state management, etc.
+
+to create React Application
+	 -> npm create vite@latest
+
+Component two types:-
+	1. Functional Component - 
+			state and props
+
+	2. Class Component - state props
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+			
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
