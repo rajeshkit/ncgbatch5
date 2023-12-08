@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--      <bean id="e1" class="com.altimterik.Employee"></bean>-->
+<!--      <bean class="com.altimterik.Altimetrik" autowire="no"></bean>-->
+
+      <bean id="c1" class="com.altimterik.Course" primary="true"></bean>
+      <bean id="c2" class="com.altimterik.Course"></bean>
+      <bean id="e1" class="com.altimterik.Employee"></bean>
+      <bean class="com.altimterik.Student" autowire="constructor"></bean>
+
+
+
+
+
+
+
+
+
+      <!--      <bean class="com.altimterik.Trainer" scope="prototype"></bean>-->
+
+    <!--    <bean id="t1" class="com.altimterik.Trainer">-->
+<!--        <property name="trainerId" value="5544"></property>-->
+<!--        &lt;!&ndash;public void setTrainerId(5544)&ndash;&gt;-->
+<!--        <property name="trainerName" value="xyz"></property>-->
+<!--        &lt;!&ndash;public void setTrainerName(xyz)&ndash;&gt;-->
+<!--    </bean>&lt;!&ndash;no arg constructor&ndash;&gt;-->
+
+
+<!--    <bean id="t2" class="com.altimterik.Trainer">-->
+<!--        <constructor-arg name="tId" value="1110"></constructor-arg>-->
+<!--        <constructor-arg name="tName" value="Rajesh"></constructor-arg>-->
+<!--    </bean> &lt;!&ndash;Two arg constructor&ndash;&gt;-->
+<!--    <bean id="t3" class="com.altimterik.Trainer">-->
+<!--        <constructor-arg name="tId" value="4434"></constructor-arg>-->
+<!--        <constructor-arg name="tName" value="abc"></constructor-arg>-->
+<!--    </bean> &lt;!&ndash;Two arg constructor&ndash;&gt;-->
+<!--    <bean id="t4" class="com.altimterik.Trainer"></bean> &lt;!&ndash;no arg constructor&ndash;&gt;-->
+<!--    <bean id="t5" class="com.altimterik.Trainer">-->
+<!--        <constructor-arg name="tId" value="4655"></constructor-arg>&lt;!&ndash;one arg constructor&ndash;&gt;-->
+<!--    </bean>-->
+
+</beans>
