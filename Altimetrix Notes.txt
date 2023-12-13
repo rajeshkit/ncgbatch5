@@ -638,7 +638,7 @@ SOLID Design Principles:-
 	O- Open extension closed for modification
 	L- Liskov substitution principle
 	I- Interface Segregation Principles
-	D- Depndency Injection
+	D- Dependency Injection
 
 	S - Single Responsibility Principle
 		Each class or method should be responsible for a single 		functionality of the system.
@@ -784,19 +784,52 @@ SOLID Design Principles:-
 	class SuvCar implements AdvanceFourWheeler{
 		
 	}
+	
+	{} - json object
+		POST http://localhost:8181/trip
+		{
+			"tripId":2000,
+    			"source":"chennai",
+    			"destination":"Manali",
+    			"cost":45675,
+    			"message":"joyful ride"
+		}
+	[] - json array
 
 
 
-
-
-
-
-		
 
 	D - Dependency inversion principle
 		The Dependency Inversion Principle (DIP) states that we 		should depend on abstractions (interfaces and abstract 				classes) instead of concrete implementations (classes).
 	
 	 	The abstractions should not depend on details; instead, 			the details should depend on abstractions.
+
+		interface Phone{
+			public String phoneCall();
+		}
+		public class IPhone implements Phone{
+			@Override
+			public String phoneCall(){
+			}
+		}
+		public class AndroidPhone implements Phone{
+			@Override
+			public String phoneCall(){
+			}
+		}
+		
+		public class Gadgets{
+			private Phone phone;
+			Gadgets(Phone phone){
+				this.phone=phone;
+			}
+		}
+
+
+
+
+
+
 Maven:-
 	-> java project - management tool
 	-> Maven is a powerful build tool for Java software projects.
@@ -932,18 +965,159 @@ IOC container:-
 	<bean id="t1" class="com.altimetrik.Transport"></bean>
 	<bean id="p1" class="com.altimetrik.Passenger" 				autowire="byType"></bean>
 	=================================================
-	<bean id="t1" class="com.altimetrik.Transport"></bean>
+	<bean id="t1" name="t1" class="com.altimetrik.Transport"></bean>
 	<bean id="p1" class="com.altimetrik.Passenger" 				autowire="byName"></bean>
+
+	class Passenger{
+		private Transport t1;
+	}
+
+	Bean Annotations-
+				SpringApplication
+				
+				class Student{
+				
+				}
+
+				
+	Spring Framework:-
+
+		Bean Configuration
+		- xml bean configuration + xml bean definition (<bean>)
+		- xml bean configuration + annotation (@Component)
+		- Java Bean Configuration 
+
+	AOP:- Aspect Oriented Programming		
+		Jointpoint
+		pointcut
+		advise
+		
+
+		
+
+
 
 
 SOA:-
 ====
-	
+Http Methods:-
+		POST - Create
+		GET - Read
+		PUT - Update
+		DELETE - delete
+		
+Http Status:-
+		1xx - informational
+		2xx - success
+		3xx - Redirectional
+		4xx - Client Side Error
+		5xx - Server Side Error			
+Rest API:-
+	REpresentational State Transfer 
+		
+	State - Resource - User REST api - Create a new user resource
+				   get a user resource
+				   get all user resources
+				   update a user resource
+				   delete a user resource
+
+
+	Resource - Bank REST api - Create a new bank resource
+				   get a bank resource
+				   get all bank resources
+				   update a bank resource
+				   delete a bank resource
+Rest Architectural Style Rule and Constraints:-
+=============================================
+	1.1. Uniform Interface
+			Identification of resources 
+			Manipulation of resources through representations
+			Self-descriptive messages
+			Hypermedia as the engine of application state 	
+				The data format of a representation is 						known as a media type. The media type 						identifies a specification that defines 					how a representation is to be processed.
+	Batch5Trip
+	create a resource POST http://batch5trip.com/trip
+	get a resource    GET  http://batch5trip.com/trip/10
+	get all resource  GET  http://batch5trip.com/trip
+	update a resource PUT  http://batch5trip.com/trip
+	delete a resource DELETE http://batch5trip.com/trip
+
+	1.2 Client server 
+	1.3 Stateless
+	1.4 Cacheable
+	1.5 Layered System
+Spring Boot - Rest Api application
+	Dependencies
+		spring-boot-starter-web
+		spring-boot-starter-devtools
+		Lombok
+		spring-boot-starter-data-jpa
+		mysql-connector-dependency
+	Layered architecture
+		controller
+		service
+		reposiotry
+		model
+	Spring-data-jpa repository
+		application.properties
+			- mysql db cofiguration
+		create a database
+
+	Note:-
+		In your application if it is any dependency
+		should depend on abstraction not on implmenetation	
+					
+	Model:-
+		Product
+			- int productId
+			- String productName
+			- Date productDoe;
+			- float productCost;
+			- boolean isAvailable;
+	EndPoint:-
+		POST http://localhost:8181/product-api/product
+			RequestBody - json form product
+		GET  http://localhost:8181/product-api/product
+		GET  http://localhost:8181/product-api/product/{id}
+		PUT  http://localhost:8181/product-api/product
+			RequestBody - json form product
+		DELETE http://localhost:8181/product-api/product/{id}
+		
+	controller
+			ProductController
+				+ Product addProduct(Product product)		
+				+ List<Product> getAllProducts()
+				+ Product getProductById(int productId)
+				+ Product updateProduct(Product product)
+				+ String deleteProductById(int productId)
+	service
+			ProductService(I)
+				+ Product addProduct(Product product)		
+				+ List<Product> getAllProducts()
+				+ Product getProductById(int productId)
+				+ Product updateProduct(Product product)
+				+ String deleteProductById(int productId)
+			ProductServiceImpl(C)
+				+ Product addProduct(Product product)		
+				+ List<Product> getAllProducts()
+				+ Product getProductById(int productId)
+				+ Product updateProduct(Product product)
+				+ String deleteProductById(int productId)
+
+Validation:-
+	- Bean Validation
+		-Annotations
+			
+
+
+
+
+
 WebService:-
 ===========
 		* Client / Server Architecture
-		SOAP
-		Rest API
+		* SOAP
+		* Rest API
 
 	Client
 	
@@ -998,6 +1172,32 @@ Bean Validation:-
 @Validated: 
 		Specifies validation groups to be applied at the class or 		method level.	
 
+6. List of Jakarta Bean Validation’s Constraints
+	For your reference, below is the list of built-in constraints 	defined by Jakarta Bean Validation specification, which can be 	applied for most types in JDK:
+	AssertFalse: The annotated element must be false (use for boolean 			and Boolean types).
+	AssertTrue: The annotated element must be true. Supported types 			same as AssertFalse.
+	DecimalMax: The annotated element must be a number whose value 		    must be lower or equal to the specified maximum. 		    Supported types are: BigDecimal, BigInteger, 		    CharSequence, byte, short, int, long, and their 		    respective wrappers.
+	DecimalMin: The annotated element must be a number whose value 		    must be higher or equal to the specified minimum. 		    Supported types same as DecimalMax.
+	Digits: The annotated element must be a number within accepted 		range. Supported types same as DecimalMax.
+	Email: The annotated element must be a well-formed email address. 		Supported types are CharSequence.
+	Future: The annotated element must be a date in the future. 		Supported types are: java.util.Date and 		java.util.Calendar.
+	Max: The annotated element must be a number whose value must be 		lower or equal to the specified maximum. Supported types 		same as DecimalMax.
+	Min: The annotated element must be a number whose value must be 		higher or equal to the specified minimum. Supported types 		same as DecimalMax.
+NotBlank: The annotated element must not be null and must contain at least 	  one non-whitespace character. Supported types are CharSequence.
+NotEmpty: The annotated element must not be null nor empty. Supported 	 types are: CharSequence, Collection, Map, Array.
+NotNull: The annotated element must not be null. Accepts any type.
+Null: The annotated element must be null. Accepts any type.
+Past: The annotated element must be a date in the past. Supported types 	same as Future.
+Pattern: The annotated CharSequence must match the specified regular expression.
+Size: The annotated element size must be between the specified boundaries 	(included). Supported types are: CharSequence, Collection, Map, 		Array.
+
+7. List of Hibernate Validator’s Constraints
+And below are some built-in constraints defined by Hibernate Validator, for your reference:
+CreditCardNumber: The annotated element has to represent a valid credit card number.
+ISBN: Checks that the annotated character sequence is a valid ISBN.
+Length: Validates that the string is between min and max included.
+Range: The annotated element has to be in the appropriate range. Apply on numeric values or string representation of the numeric value.
+URL: Validates the annotated string is an URL.
 
 Java Unit Testing
 	QA Team - Testing

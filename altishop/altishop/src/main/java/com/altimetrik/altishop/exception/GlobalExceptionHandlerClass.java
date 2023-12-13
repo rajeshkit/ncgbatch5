@@ -19,8 +19,11 @@ import java.util.stream.Collectors;
 public class GlobalExceptionHandlerClass {
     @ExceptionHandler(ProductIdNotExistsException.class)
     public ResponseEntity<?> handlerProductIdNotExists(ProductIdNotExistsException ex, HttpServletRequest request) {
-        ApiError apiError=new ApiError
-                (new Date(),request.getRequestURI(), Arrays.asList(ex.getLocalizedMessage()),HttpStatus.NOT_FOUND.toString());
+        ApiError apiError=ApiError.builder()
+                .date(new Date())
+                .path(request.getRequestURI())
+                .message(Arrays.asList(ex.getLocalizedMessage()))
+                .status(HttpStatus.NOT_FOUND.toString()).build();
         return new ResponseEntity<>(apiError, HttpStatus.NOT_FOUND);
     }
     @ExceptionHandler(MethodArgumentNotValidException.class)
@@ -28,8 +31,11 @@ public class GlobalExceptionHandlerClass {
             (MethodArgumentNotValidException ex, HttpServletRequest request){
         List<FieldError> dlist = ex.getBindingResult().getFieldErrors();
         List<String> listOfError = dlist.stream().map(e->e.getField()+":"+e.getDefaultMessage()).collect(Collectors.toList());
-        ApiError apiError=new ApiError
-                (new Date(),request.getRequestURI(),listOfError,HttpStatus.BAD_REQUEST.toString());
+        ApiError apiError=ApiError.builder()
+                .date(new Date())
+                .path(request.getRequestURI())
+                .message(listOfError)
+                .status(HttpStatus.NOT_FOUND.toString()).build();
         return new ResponseEntity<>(apiError,HttpStatus.BAD_REQUEST);
     }
 }

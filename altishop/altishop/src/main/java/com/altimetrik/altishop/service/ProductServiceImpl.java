@@ -12,7 +12,8 @@ import java.util.Optional;
 @Service
 public class ProductServiceImpl implements ProductService{
     @Autowired
-    private ProductRepository productRepository;
+    private ProductRepository productRepository;// make a dummy
+    //reposiotry the same dummy will return
     @Override
     public Product addProduct(Product product) {
         return productRepository.save(product);
